@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\CameraController.cs" />
+     <Compile Include="Assets\CarControllerNEW.cs" />
+     <Compile Include="Assets\CarWheel.cs" />
+     <Compile Include="Assets\Controller.cs" />
+     <Compile Include="Assets\ForcerConrol.cs" />
+     <Compile Include="Assets\NewPH\AntiRollBar.cs" />
+     <Compile Include="Assets\NewPH\CameraFixedTo.cs" />
+     <Compile Include="Assets\NewPH\CameraSwicher.cs" />
+     <Compile Include="Assets\NewPH\CarSound.cs" />
+     <Compile Include="Assets\NewPH\Control.cs" />
+     <Compile Include="Assets\NewPH\NewControl.cs" />
+     <Compile Include="Assets\NewPH\RoadStiffness.cs" />
+     <Compile Include="Assets\NewPH\SkidMarks.cs" />
+     <Compile Include="Assets\NewPH\TimerDestroyer.cs" />
+     <Compile Include="Assets\NewPH\Visual.cs" />
+     <Compile Include="Assets\NewPH\Wheel.cs" />
+     <Compile Include="Assets\NewPH\WheelFriction.cs" />
+     <Compile Include="Assets\NewPH\WheelVisual.cs" />
+     <Compile Include="Assets\OVR\OVRImageEffects\OVRImageEffectBase.cs" />
+     <Compile Include="Assets\OVR\OVRImageEffects\OVRLensCorrection.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRCamera.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRCameraController.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRComponent.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRCrosshair.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRDevice.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRDistortionCamera.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRDistortionMesh.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRGUI.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRGamepadController.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRGridCube.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRMagCalibration.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRMainMenu.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRMessenger.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRPlayerController.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRPresetManager.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRUtils.cs" />
+     <Compile Include="Assets\OVR\Scripts\OVRVisionGuide.cs" />
+     <Compile Include="Assets\OtherControl.cs" />
+     <Compile Include="Assets\Restartwe.cs" />
+     <Compile Include="Assets\Ruins\Scripts\CameraShake.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\Decals\DS_DecalProjector.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\Decals\DS_DecalProjectorGroup.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\Decals\DS_Decals.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\Decals\Renderer\DS_DecalsMeshRenderer.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\SkinnedDecals\DS_SkinnedDecalProjector.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\SkinnedDecals\DS_SkinnedDecalProjectorGroup.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\SkinnedDecals\DS_SkinnedDecals.cs" />
+     <Compile Include="Assets\Ruins\Scripts\Plugins\Decals\Scripts\Decals\SkinnedDecals\Renderer\DS_SkinnedDecalsMeshRenderer.cs" />
+     <Compile Include="Assets\Ruins\Standard Assets\Image Based\DesaturateEffect.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\BirdsBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\BlobShadowController.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\CarCamera.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\CombineChildren.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\DisableObjects.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\EffectController.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\Generate2DReflection.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\MeshCombineUtility.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\MirrorReflection.cs" />
+     <Compile Include="Assets\Scripts\CSharpScripts\ToggleObjectTrigger.cs" />
+     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
+     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\BlurEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffectPCMac_26.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\ContrastStretchEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\EdgeDetectEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectThreshold_26.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\GrayscaleEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\ImageEffectBase.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\ImageEffects.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\MotionBlur.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\MotionBlurEdge.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\SSAOEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\SepiaToneEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\TwirlEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Image Based\VortexEffect.cs" />
+     <Compile Include="Assets\Treck\Pro Standard Assets\Water\Sources\Water.cs" />
+     <Compile Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\Displace.cs" />
+     <Compile Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterTile.cs" />
+     <None Include="Assets\Treck\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectDownsample.shader" />
+     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_Mesh.shader" />
+     <None Include="Assets\Treck\Shaders\PolyTerrain\FirstPassLightmap.shader" />
+     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_Mesh_CA.shader" />
+     <None Include="Assets\Treck\Shaders\LightMappedDiffusetDetail.shader" />
+     <None Include="Assets\Treck\Shaders\LightsEmmissive.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Treck\Shaders\ShadowProjection.shader" />
+     <None Include="Assets\Treck\~AlternatePhysicsModel\Source Assets\Cars\Car.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\MotionBlur.shader" />
+     <None Include="Assets\Treck\Shaders\GlassReflect.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffect_26.shader" />
+     <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\Treck\~AlternatePhysicsModel\Source Assets\Skidmarks\Skidmarks.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectDownsample_26.shader" />
+     <None Include="Assets\Treck\Shaders\Normal-BumpSpec_EnvLightmapped.shader" />
+     <None Include="Assets\Ruins\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\SSAOShader.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_CA.shader" />
+     <None Include="Assets\Treck\Shaders\AlphaTest-Diffuse-GEqual.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Treck\Shaders\Skidmarks.shader" />
+     <None Include="Assets\Treck\Shaders\Glassreflect2D.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Water\Sources\FX-Water.shader" />
+     <None Include="Assets\Treck\Shaders\GlassBuilding.shader" />
+     <None Include="Assets\Treck\Shaders\PolyTerrain\polysplatting.cginc" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\GrayscaleEffect.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\SepiaToneEffect.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\TwirlEffect.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\VortexEffect.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Treck\Shaders\Alpha-VertexLitGlow02.shader" />
+     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection.shader" />
+     <None Include="Assets\Ruins\Standard Assets\Image Based\DesaturateEffect.shader" />
+     <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
+     <None Include="Assets\Treck\Pro Standard Assets\Image Based\EdgeDetectX.shader" />
+     <None Include="Assets\Treck\Shaders\MirrorReflectionLit.shader" />
+     <None Include="Assets\Treck\Textures\VFX\ShadowProjection.shader" />
+     <None Include="Assets\Treck\Shaders\TransparentLightMappedVertexLiZWrite.shader" />
+     <None Include="Assets\Treck\Shaders\Alpha-Diffuse-ZWrite.shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>D:/TrackReloaded/New Unity Project/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="DecalSystem.Runtime">
+ <HintPath>D:/TrackReloaded/New Unity Project/Assets/Ruins/Scripts/Plugins/Decals/DecalSystem.Runtime.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

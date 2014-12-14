@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: aaf0d0979f55cd349b3d24bb1242c08e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - SkidMaterial: {instanceID: 0}
+  - SkidSmoke: {instanceID: 0}
+  - SkidSound: {fileID: 100000, guid: 089c66eb379331647a469c8a5cbb7cb5, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
