@@ -272,7 +272,8 @@ public class NewControl : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		//AntiRoll();
+		rigidbody.AddForce(new Vector3(0f,0f,2000.0f));
+		AntiRoll();
 		//Debug.Log(overallValue);
 		//Test code
 		//WheelFL.setSteer(0f);
@@ -685,7 +686,7 @@ public class NewControl : MonoBehaviour {
 				}
 				//If there is less than 1500 rpm
 				//gear need to be changed
-				else if(currentGear > 0 && ((rpm < 2000 && overallValue <= 0) || rpm < 1000)) {
+				else if(currentGear > 0 && ((rpm < 2000 && overallValue <= 0) || rpm <= 1000)) {
 					Debug.Log("decreased " + Time.time);
 					currentGear--;
 					gearChange = 0.12f;
