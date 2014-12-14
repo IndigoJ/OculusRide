@@ -1,93 +1,111 @@
-Base path: D:/UnityPro/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-7372
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-7432
 Cmd: getPlatforms
 Cmd: preprocess
   insize=3325 outsize=1181 ok=1
 Cmd: preprocess
-  insize=2611 outsize=856 ok=1
+  insize=2022 outsize=638 ok=1
 Cmd: preprocess
-  insize=5140 outsize=2085 ok=1
+  insize=2707 outsize=887 ok=1
 Cmd: preprocess
-  insize=2429 outsize=886 ok=1
+  insize=941 outsize=317 ok=1
 Cmd: preprocess
-  insize=1108 outsize=458 ok=1
+  insize=10232 outsize=10232 ok=1
+Cmd: preprocess
+  insize=5351 outsize=2168 ok=1
+Cmd: preprocess
+  insize=2328 outsize=2328 ok=1
+Cmd: preprocess
+  insize=2172 outsize=624 ok=1
+Cmd: preprocess
+  insize=2526 outsize=926 ok=1
+Cmd: preprocess
+  insize=1153 outsize=480 ok=1
 Cmd: preprocess
   insize=1691 outsize=1141 ok=1
 Cmd: preprocess
   insize=2440 outsize=1155 ok=1
 Cmd: preprocess
-  insize=8917 outsize=1153 ok=1
+  insize=946 outsize=946 ok=1
 Cmd: preprocess
-  insize=12913 outsize=2602 ok=1
+  insize=1243 outsize=312 ok=1
 Cmd: preprocess
-  insize=12080 outsize=2481 ok=1
+  insize=2247 outsize=1934 ok=1
 Cmd: preprocess
-  insize=7424 outsize=1109 ok=1
+  insize=9251 outsize=1204 ok=1
 Cmd: preprocess
-  insize=2422 outsize=1168 ok=1
+  insize=13357 outsize=2694 ok=1
 Cmd: preprocess
-  insize=9948 outsize=9948 ok=1
+  insize=1773 outsize=674 ok=1
+Cmd: preprocess
+  insize=1729 outsize=630 ok=1
+Cmd: preprocess
+  insize=5162 outsize=4819 ok=1
+Cmd: preprocess
+  insize=1277 outsize=473 ok=1
+Cmd: preprocess
+  insize=686 outsize=1313 ok=1
+Cmd: preprocess
+  insize=1558 outsize=547 ok=1
+Cmd: preprocess
+  insize=623 outsize=623 ok=1
+Cmd: preprocess
+  insize=12509 outsize=2575 ok=1
+Cmd: preprocess
+  insize=7763 outsize=1166 ok=1
+Cmd: preprocess
+  insize=2525 outsize=1217 ok=1
+Cmd: preprocess
+  insize=665 outsize=665 ok=1
+Cmd: preprocess
+  insize=2723 outsize=2723 ok=1
+Cmd: preprocess
+  insize=10342 outsize=10342 ok=1
 Cmd: preprocess
   insize=2702 outsize=1124 ok=1
 Cmd: preprocess
-  insize=5667 outsize=2816 ok=1
+  insize=889 outsize=396 ok=1
 Cmd: preprocess
-  insize=1943 outsize=615 ok=1
+  insize=5871 outsize=2915 ok=1
 Cmd: preprocess
-  insize=894 outsize=302 ok=1
+  insize=734 outsize=494 ok=1
 Cmd: preprocess
-  insize=9827 outsize=9827 ok=1
+  insize=3554 outsize=3554 ok=1
 Cmd: preprocess
-  insize=2248 outsize=2248 ok=1
+  insize=623 outsize=623 ok=1
 Cmd: preprocess
-  insize=2100 outsize=596 ok=1
-Cmd: preprocess
-  insize=905 outsize=905 ok=1
-Cmd: preprocess
-  insize=1183 outsize=296 ok=1
-Cmd: preprocess
-  insize=2144 outsize=1906 ok=1
-Cmd: preprocess
-  insize=1699 outsize=647 ok=1
-Cmd: preprocess
-  insize=1662 outsize=609 ok=1
-Cmd: preprocess
-  insize=4962 outsize=4663 ok=1
-Cmd: preprocess
-  insize=1215 outsize=451 ok=1
-Cmd: preprocess
-  insize=648 outsize=1297 ok=1
-Cmd: preprocess
-  insize=1486 outsize=523 ok=1
-Cmd: preprocess
-  insize=596 outsize=596 ok=1
-Cmd: preprocess
-  insize=633 outsize=633 ok=1
-Cmd: preprocess
-  insize=2628 outsize=2628 ok=1
-Cmd: preprocess
-  insize=847 outsize=376 ok=1
-Cmd: preprocess
-  insize=695 outsize=469 ok=1
-Cmd: preprocess
-  insize=3430 outsize=3430 ok=1
-Cmd: preprocess
-  insize=596 outsize=596 ok=1
-Cmd: preprocess
-  insize=833 outsize=426 ok=1
+  insize=873 outsize=447 ok=1
 Cmd: preprocess
   error: 1 plat 12 at (100): Compiling shaders to OpenGL ES 2.0, Xbox 360, PS3, Flash or DX11 requires both vertex and fragment programs
-  insize=2669 outsize=1484 ok=1
+  insize=2780 outsize=1538 ok=1
 Cmd: preprocess
-  insize=1290 outsize=1290 ok=1
+  insize=1334 outsize=1334 ok=1
 Cmd: preprocess
-  insize=459 outsize=459 ok=1
+  insize=487 outsize=487 ok=1
 Cmd: preprocess
   error: 1 plat 12 at (100): Compiling shaders to OpenGL ES 2.0, Xbox 360, PS3, Flash or DX11 requires both vertex and fragment programs
-  insize=2669 outsize=1484 ok=1
+  insize=2780 outsize=1538 ok=1
 Cmd: preprocess
-  insize=894 outsize=302 ok=1
+  insize=941 outsize=317 ok=1
 Cmd: preprocess
-  insize=1345 outsize=754 ok=1
+  insize=1406 outsize=783 ok=1
 Cmd: preprocess
-  insize=634 outsize=634 ok=1
+  insize=666 outsize=666 ok=1
+Cmd: compileSnippet
+  error: 2 plat 8 at (48): 'vert': function return value missing semantics
+  api=8 type=0 insize=3155 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 8 at (78): 'frag': input parameter 'i' missing semantics
+  api=8 type=1 insize=3155 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 8 at (48): 'vert': function return value missing semantics
+  api=8 type=0 insize=3155 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 8 at (78): 'frag': input parameter 'i' missing semantics
+  api=8 type=1 insize=3155 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 8 at (48): 'vert': function return value missing semantics
+  api=8 type=0 insize=3155 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 8 at (78): 'frag': input parameter 'i' missing semantics
+  api=8 type=1 insize=3155 outsize=0 kw= ok=0

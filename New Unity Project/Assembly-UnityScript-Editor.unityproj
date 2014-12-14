@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -50,9 +50,7 @@
      <None Include="Assets\Treck\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectDownsample.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_Mesh.shader" />
      <None Include="Assets\Treck\Shaders\PolyTerrain\FirstPassLightmap.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_Mesh_CA.shader" />
      <None Include="Assets\Treck\Shaders\LightMappedDiffusetDetail.shader" />
      <None Include="Assets\Treck\Shaders\LightsEmmissive.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffect.shader" />
@@ -70,7 +68,6 @@
      <None Include="Assets\Ruins\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\SSAOShader.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderYUV.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_CA.shader" />
      <None Include="Assets\Treck\Shaders\AlphaTest-Diffuse-GEqual.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Treck\Shaders\Skidmarks.shader" />
@@ -84,7 +81,6 @@
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\VortexEffect.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\Treck\Shaders\Alpha-VertexLitGlow02.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection.shader" />
      <None Include="Assets\Ruins\Standard Assets\Image Based\DesaturateEffect.shader" />
      <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
@@ -93,17 +89,23 @@
      <None Include="Assets\Treck\Textures\VFX\ShadowProjection.shader" />
      <None Include="Assets\Treck\Shaders\TransparentLightMappedVertexLiZWrite.shader" />
      <None Include="Assets\Treck\Shaders\Alpha-Diffuse-ZWrite.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
  <Reference Include="DecalSystem.Runtime">
- <HintPath>D:/TrackReloaded/New Unity Project/Assets/Ruins/Scripts/Plugins/Decals/DecalSystem.Runtime.dll</HintPath>
+ <HintPath>D:/OCULUS/OculusRide/New Unity Project/Assets/Ruins/Scripts/Plugins/Decals/DecalSystem.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="DecalSystem.Editor">
- <HintPath>D:/TrackReloaded/New Unity Project/Assets/Ruins/Scripts/Plugins/Editor/Decal System/DecalSystem.Editor.dll</HintPath>
+ <HintPath>D:/OCULUS/OculusRide/New Unity Project/Assets/Ruins/Scripts/Plugins/Editor/Decal System/DecalSystem.Editor.dll</HintPath>
  </Reference>
  <Reference Include="ShaderForge">
- <HintPath>D:/TrackReloaded/New Unity Project/Assets/ShaderForge/Editor/Code/ShaderForge.dll</HintPath>
+ <HintPath>D:/OCULUS/OculusRide/New Unity Project/Assets/ShaderForge/Editor/Code/ShaderForge.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,28 +39,13 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\OVR\Editor\OVRBuild.cs" />
-     <Compile Include="Assets\OVR\Editor\OVRCameraControllerEditor.cs" />
-     <Compile Include="Assets\OVR\Editor\OVRDeviceEditor.cs" />
-     <Compile Include="Assets\OVR\Editor\OVREditorGUIUtility.cs" />
-     <Compile Include="Assets\OVR\Editor\OVRPlayerControllerEditor.cs" />
-     <Compile Include="Assets\OVR\Editor\OVRPrefabs.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\Decals\DS_DecalProjectorEditor.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\Decals\DS_DecalProjectorGroupEditor.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\Decals\DS_DecalsEditor.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\SkinnedDecals\DS_SkinnedDecalProjectorEditor.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\SkinnedDecals\DS_SkinnedDecalProjectorGroupEditor.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\SkinnedDecals\DS_SkinnedDecalsEditor.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\Support\DecalsGizmos.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\Support\DecalsMenu.cs" />
-     <Compile Include="Assets\Ruins\Scripts\Plugins\Editor\Decal System\Scripts\Window\DS_UVRectangleEditorWindow.cs" />
      <Compile Include="Assets\Treck\Editor\Water (Pro Only)\Water4\GerstnerDisplaceEditor.cs" />
      <Compile Include="Assets\Treck\Editor\Water (Pro Only)\Water4\PlanarReflectionEditor.cs" />
      <Compile Include="Assets\Treck\Editor\Water (Pro Only)\Water4\SpecularLightingEditor.cs" />
@@ -69,9 +54,7 @@
      <None Include="Assets\Treck\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectDownsample.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_Mesh.shader" />
      <None Include="Assets\Treck\Shaders\PolyTerrain\FirstPassLightmap.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_Mesh_CA.shader" />
      <None Include="Assets\Treck\Shaders\LightMappedDiffusetDetail.shader" />
      <None Include="Assets\Treck\Shaders\LightsEmmissive.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffect.shader" />
@@ -86,10 +69,8 @@
      <None Include="Assets\Treck\~AlternatePhysicsModel\Source Assets\Skidmarks\Skidmarks.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectDownsample_26.shader" />
      <None Include="Assets\Treck\Shaders\Normal-BumpSpec_EnvLightmapped.shader" />
-     <None Include="Assets\Ruins\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\SSAOShader.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderYUV.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection_CA.shader" />
      <None Include="Assets\Treck\Shaders\AlphaTest-Diffuse-GEqual.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Treck\Shaders\Skidmarks.shader" />
@@ -103,8 +84,6 @@
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\VortexEffect.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\Treck\Shaders\Alpha-VertexLitGlow02.shader" />
-     <None Include="Assets\OVR\OVRImageEffects\OVRLensCorrection.shader" />
-     <None Include="Assets\Ruins\Standard Assets\Image Based\DesaturateEffect.shader" />
      <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
      <None Include="Assets\Treck\Pro Standard Assets\Image Based\EdgeDetectX.shader" />
@@ -112,26 +91,19 @@
      <None Include="Assets\Treck\Textures\VFX\ShadowProjection.shader" />
      <None Include="Assets\Treck\Shaders\TransparentLightMappedVertexLiZWrite.shader" />
      <None Include="Assets\Treck\Shaders\Alpha-Diffuse-ZWrite.shader" />
- <Reference Include="DecalSystem.Runtime">
- <HintPath>D:/TrackReloaded/New Unity Project/Assets/Ruins/Scripts/Plugins/Decals/DecalSystem.Runtime.dll</HintPath>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="DecalSystem.Editor">
- <HintPath>D:/TrackReloaded/New Unity Project/Assets/Ruins/Scripts/Plugins/Editor/Decal System/DecalSystem.Editor.dll</HintPath>
- </Reference>
- <Reference Include="ShaderForge">
- <HintPath>D:/TrackReloaded/New Unity Project/Assets/ShaderForge/Editor/Code/ShaderForge.dll</HintPath>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>D:/UnityPro/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{C62E21C4-7CD8-5581-1E66-AC8E36219989}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{1753851C-AE59-909A-15AB-E3FFE34BC5A0}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
