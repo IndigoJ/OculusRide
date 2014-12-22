@@ -46,48 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Standard Assets\Scripts\Camera Scripts\MouseOrbit.js" />
      <Compile Include="Assets\Standard Assets\Scripts\Camera Scripts\SmoothFollow.js" />
-     <None Include="Assets\Treck\Standard Assets\Glass Refraction (Pro Only)\Sources\Shaders\Glass-Stained-BumpDistort.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderRGB.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectDownsample.shader" />
-     <None Include="Assets\Treck\Shaders\PolyTerrain\FirstPassLightmap.shader" />
-     <None Include="Assets\Treck\Shaders\LightMappedDiffusetDetail.shader" />
-     <None Include="Assets\Treck\Shaders\LightsEmmissive.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffect.shader" />
-     <None Include="Assets\Treck\Shaders\ShadowProjection.shader" />
-     <None Include="Assets\Treck\~AlternatePhysicsModel\Source Assets\Cars\Car.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\MotionBlur.shader" />
-     <None Include="Assets\Treck\Shaders\GlassReflect.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\MinMaxReduction.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Apply.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\ColorCorrectionEffect_26.shader" />
-     <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
-     <None Include="Assets\Treck\~AlternatePhysicsModel\Source Assets\Skidmarks\Skidmarks.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\GlowEffectDownsample_26.shader" />
-     <None Include="Assets\Treck\Shaders\Normal-BumpSpec_EnvLightmapped.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\SSAOShader.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\NoiseEffectShaderYUV.shader" />
-     <None Include="Assets\Treck\Shaders\AlphaTest-Diffuse-GEqual.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Luminance.shader" />
-     <None Include="Assets\Treck\Shaders\Skidmarks.shader" />
-     <None Include="Assets\Treck\Shaders\Glassreflect2D.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Water\Sources\FX-Water.shader" />
-     <None Include="Assets\Treck\Shaders\GlassBuilding.shader" />
-     <None Include="Assets\Treck\Shaders\PolyTerrain\polysplatting.cginc" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\GrayscaleEffect.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\SepiaToneEffect.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\TwirlEffect.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\VortexEffect.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\Contrast Stretch\Adaptation.shader" />
-     <None Include="Assets\Treck\Shaders\Alpha-VertexLitGlow02.shader" />
-     <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
-     <None Include="Assets\Treck\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
-     <None Include="Assets\Treck\Pro Standard Assets\Image Based\EdgeDetectX.shader" />
-     <None Include="Assets\Treck\Shaders\MirrorReflectionLit.shader" />
-     <None Include="Assets\Treck\Textures\VFX\ShadowProjection.shader" />
-     <None Include="Assets\Treck\Shaders\TransparentLightMappedVertexLiZWrite.shader" />
-     <None Include="Assets\Treck\Shaders\Alpha-Diffuse-ZWrite.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
