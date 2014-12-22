@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NewPH\NewControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Temp\Compiled-Normal-Glossy-Win.shader">
     <Files>
-      <File FileName="Assets\NewPH\CarSound.cs" Line="1" Column="1" />
-      <File FileName="Assets\NewPH\NewControl.cs" Line="313" Column="17" />
+      <File FileName="Temp\Compiled-Normal-Glossy-Win.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

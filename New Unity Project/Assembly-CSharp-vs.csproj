@@ -46,18 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\NewPH\AntiRollBar.cs" />
-     <Compile Include="Assets\NewPH\CameraFixedTo.cs" />
-     <Compile Include="Assets\NewPH\CarSound.cs" />
-     <Compile Include="Assets\NewPH\Control.cs" />
-     <Compile Include="Assets\NewPH\NewControl.cs" />
-     <Compile Include="Assets\NewPH\RoadStiffness.cs" />
-     <Compile Include="Assets\NewPH\SkidMarks.cs" />
-     <Compile Include="Assets\NewPH\TimerDestroyer.cs" />
-     <Compile Include="Assets\NewPH\Visual.cs" />
-     <Compile Include="Assets\NewPH\Wheel.cs" />
-     <Compile Include="Assets\NewPH\WheelFriction.cs" />
-     <Compile Include="Assets\NewPH\WheelVisual.cs" />
+     <Compile Include="Assets\ALL\NewPH\AntiRollBar.cs" />
+     <Compile Include="Assets\ALL\NewPH\CameraFixedTo.cs" />
+     <Compile Include="Assets\ALL\NewPH\CarSound.cs" />
+     <Compile Include="Assets\ALL\NewPH\Control.cs" />
+     <Compile Include="Assets\ALL\NewPH\NewControl.cs" />
+     <Compile Include="Assets\ALL\NewPH\RoadStiffness.cs" />
+     <Compile Include="Assets\ALL\NewPH\SkidMarks.cs" />
+     <Compile Include="Assets\ALL\NewPH\TimerDestroyer.cs" />
+     <Compile Include="Assets\ALL\NewPH\Visual.cs" />
+     <Compile Include="Assets\ALL\NewPH\Wheel.cs" />
+     <Compile Include="Assets\ALL\NewPH\WheelFriction.cs" />
+     <Compile Include="Assets\ALL\NewPH\WheelVisual.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
