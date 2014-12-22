@@ -128,7 +128,7 @@ public class NewControl : MonoBehaviour {
 		GUI.Label(new Rect(20,110,250,100),"Relative steer " + CalculateSteer());
 		GUI.Label(new Rect(20,130,250,100),"Wheel fl rpm " + (WheelFL.collider.rpm));
 		GUI.Label(new Rect(20,150,250,100),"Motor torque " + motorTorque);
-		GUI.Label(new Rect(20,170,250,100),"All wheels grounded " + AllWheelsGrounded());
+		GUI.Label(new Rect(20,170,250,100),"Engaged delay " + engagedDelay);
 
 	}
 	//Car wheels
@@ -181,11 +181,13 @@ public class NewControl : MonoBehaviour {
 	private float reverseValue = 0.0f;
 	private float handbrakeValue = 0.0f;
 	private float overallValue = 0.0f;
+	private bool engaged = false;
+	private float engagedDelay = 0.0f;
 	//Gear change timer
 	private float gearChange = 0.0f;
 	//Current car parameters
 	public float maxSpeed = 150.0f;
-	public float rpm = 1500.0f;
+	public float rpm = 1000.0f;
 	public int currentGear = 0;
 	private bool eBraking = false;
 	//Skid parameters
@@ -314,17 +316,8 @@ public class NewControl : MonoBehaviour {
 		if(gearChange > 0) {
 			gearChange -= Time.deltaTime;
 		}
-		if(flWheelDealy > 0) {
-			flWheelDealy -= Time.deltaTime;
-		}
-		if(frWheelDealy > 0) {
-			frWheelDealy -= Time.deltaTime;
-		}
-		if(rlWheelDealy > 0) {
-			rlWheelDealy -= Time.deltaTime;
-		}
-		if(rrWheelDealy > 0) {
-			rrWheelDealy -= Time.deltaTime;
+		if(engagedDelay > 0) {
+			engagedDelay -= Time.deltaTime;
 		}
 		//In case of neutral
 		//starting the movement
@@ -498,7 +491,7 @@ public class NewControl : MonoBehaviour {
 		//Clamping rpm
 		//to rmp > 1000
 		float nRpm = Mathf.Abs(rpm);
-		if(rpm < 1500 || gearChange > 0) nRpm = 1500;
+		if(rpm < 1000 || gearChange > 0) nRpm = 1000;
 		//Evaluating engine torque
 		//based on given engine rpm
 		//using the magic
@@ -509,7 +502,10 @@ public class NewControl : MonoBehaviour {
 		if(overallValue > 0 && currentGear >= 0) {
 			float engineTorque = maxEngineTorque * overallValue;
 			//Calculating final motor torque
-			motorTorque = engineTorque * gearRatios[currentGear - 1] * diffRatio * transmissionEff * throttleLimit[currentGear - 1];
+			if (engagedDelay <= 0)
+				motorTorque = engineTorque * gearRatios[currentGear - 1] * diffRatio * transmissionEff * throttleLimit[currentGear - 1];
+			else
+				motorTorque = engineTorque * gearRatios[currentGear - 1] * diffRatio * transmissionEff * 0.4f;
 			this.motorTorque = motorTorque;
 			//Froward right wheel
 			if(AllWheelsGrounded())
@@ -618,7 +614,7 @@ public class NewControl : MonoBehaviour {
 			rpm = wheelRpm * gearRatios[currentGear - 1] * diffRatio;
 		else rpm = wheelRpm * reverseRatio * diffRatio;
 		//Clamping rpm to rpm > 1000
-		if(rpm < 1500) rpm = 1500;
+		if(rpm < 1000) rpm = 1000;
 		//Test code
 		//Debug.Log(rpm + " " + Time.time);
 
@@ -661,6 +657,7 @@ public class NewControl : MonoBehaviour {
 			if(overallValue < 0 && currentGear >= 0) {
 				//if(Mathf.Abs(relVelocity.z) < 0.01f)
 				currentGear--;
+				if(currentGear == 0) engaged = false;
 				gearChange = 0.12f;
 				return;
 
@@ -670,6 +667,11 @@ public class NewControl : MonoBehaviour {
 				//Debug.Log("First");
 				Debug.Log("first " + Time.time);
 				currentGear++;
+				if (currentGear == 1 && engaged == false) {
+					engaged = true;
+					engagedDelay = 2.24f;
+				}
+				if(currentGear > 1 && engagedDelay > 0.0f) engagedDelay = 0.0f;
 				gearChange = 0.12f;
 				return;
 			}
@@ -684,13 +686,19 @@ public class NewControl : MonoBehaviour {
 				//to be changed
 				if(currentGear < changGears.Length && rpm > changGears[currentGear - 1] && overallValue > 0) {
 					currentGear++;
+					if (currentGear == 1 && engaged == false) {
+						engaged = true;
+						engagedDelay = 2.24f;
+					}
+					if(currentGear > 1 && engagedDelay > 0.0f) engagedDelay = 0.0f;
 					gearChange = 0.12f;
 				}
 				//If there is less than 1500 rpm
 				//gear need to be changed
-				else if(currentGear > 0 && ((rpm < 2000 && overallValue <= 0) || rpm <= 1500)) {
+				else if(currentGear > 0 && ((rpm < 2000 && overallValue <= 0) || rpm < 1000)) {
 					Debug.Log("decreased " + Time.time);
 					currentGear--;
+					if(currentGear == 0) engaged = false;
 					gearChange = 0.12f;
 				}
 				return;
