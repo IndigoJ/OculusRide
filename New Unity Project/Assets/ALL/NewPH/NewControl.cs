@@ -127,9 +127,8 @@ public class NewControl : MonoBehaviour {
 		GUI.Label(new Rect(20,90,250,100),"Sideways slip wheel fl " + WheelFL.getSidewaysSlip());
 		GUI.Label(new Rect(20,110,250,100),"Relative steer " + CalculateSteer());
 		GUI.Label(new Rect(20,130,250,100),"Wheel fl rpm " + (WheelFL.collider.rpm));
-		GUI.Label(new Rect(20,150,250,100),"Wheel fr rpm " + (WheelFL.collider.rpm));
-		GUI.Label(new Rect(20,170,250,100),"Wheel rl rpm " + (WheelRL.collider.rpm));
-		GUI.Label(new Rect(20,190,250,100),"Wheel rr rpm " + (WheelRR.collider.rpm));
+		GUI.Label(new Rect(20,150,250,100),"Motor torque " + motorTorque);
+		GUI.Label(new Rect(20,170,250,100),"All wheels grounded " + AllWheelsGrounded());
 
 	}
 	//Car wheels
@@ -164,6 +163,7 @@ public class NewControl : MonoBehaviour {
 	public float rollingResist = 0.01f;
 	public float engBrake = 0.54f;
 	public float brakeTorue = 1000.0f;
+	public float motorTorque = 0.0f;
 	//Engine torque curve, torque
 	//based on engine rpm
 	public AnimationCurve EngineTorqueCurve;
@@ -185,7 +185,7 @@ public class NewControl : MonoBehaviour {
 	private float gearChange = 0.0f;
 	//Current car parameters
 	public float maxSpeed = 150.0f;
-	public float rpm = 1000.0f;
+	public float rpm = 1500.0f;
 	public int currentGear = 0;
 	private bool eBraking = false;
 	//Skid parameters
@@ -363,7 +363,7 @@ public class NewControl : MonoBehaviour {
 			//Calculating engine rpm
 			//(revolutions per minute)
 			//if(AllWheelsGrounded())
-				CalculateRPM(relVelocity);
+			CalculateRPM(relVelocity);
 			//else 
 				//rpm = 1000;
 			//Changing gear in case there are
@@ -498,7 +498,7 @@ public class NewControl : MonoBehaviour {
 		//Clamping rpm
 		//to rmp > 1000
 		float nRpm = Mathf.Abs(rpm);
-		if(rpm < 1000 || gearChange > 0) nRpm = 1000;
+		if(rpm < 1500 || gearChange > 0) nRpm = 1500;
 		//Evaluating engine torque
 		//based on given engine rpm
 		//using the magic
@@ -510,6 +510,7 @@ public class NewControl : MonoBehaviour {
 			float engineTorque = maxEngineTorque * overallValue;
 			//Calculating final motor torque
 			motorTorque = engineTorque * gearRatios[currentGear - 1] * diffRatio * transmissionEff * throttleLimit[currentGear - 1];
+			this.motorTorque = motorTorque;
 			//Froward right wheel
 			if(AllWheelsGrounded())
 				WheelFR.ApplyMotorTorque(motorTorque);
@@ -546,6 +547,7 @@ public class NewControl : MonoBehaviour {
 				//gearChange = 0.60f;
 			}  
 				//WheelRR.ApplyMotorTorque(0);
+			Debug.Log("Torque applied " + motorTorque + " " + Time.time);
 		}
 		//Moving backwards
 		else {
@@ -616,7 +618,7 @@ public class NewControl : MonoBehaviour {
 			rpm = wheelRpm * gearRatios[currentGear - 1] * diffRatio;
 		else rpm = wheelRpm * reverseRatio * diffRatio;
 		//Clamping rpm to rpm > 1000
-		if(rpm < 1000) rpm = 1000;
+		if(rpm < 1500) rpm = 1500;
 		//Test code
 		//Debug.Log(rpm + " " + Time.time);
 
@@ -686,7 +688,7 @@ public class NewControl : MonoBehaviour {
 				}
 				//If there is less than 1500 rpm
 				//gear need to be changed
-				else if(currentGear > 0 && ((rpm < 2000 && overallValue <= 0) || rpm <= 1000)) {
+				else if(currentGear > 0 && ((rpm < 2000 && overallValue <= 0) || rpm <= 1500)) {
 					Debug.Log("decreased " + Time.time);
 					currentGear--;
 					gearChange = 0.12f;
