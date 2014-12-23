@@ -242,7 +242,7 @@ public class NewControl : MonoBehaviour {
 
 		WheelFL.setSteer(steerValue * relSteer);
 		WheelFR.setSteer(steerValue * relSteer);
-		aim.NeedAngle = -1.0f * steerValue * relSteer * 5;
+		aim.NeedAngle = -1.0f * steerValue * relSteer * 5+100;
 		//Test code
 		//WheelFL.collider.steerAngle = steerValue * 5.0f;
 		//WheelFR.collider.steerAngle = steerValue * 5.0f;

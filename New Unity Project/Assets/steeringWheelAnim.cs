@@ -12,6 +12,6 @@ public class steeringWheelAnim : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.localEulerAngles = Vector3.Lerp (transform.localEulerAngles, new Vector3 (19.52147f, 0, NeedAngle), 0.5f);
+	 transform.localEulerAngles = Vector3.Lerp (transform.localEulerAngles, new Vector3 (19.52147f, 0f, NeedAngle), 0.5f);
 	}
 }
