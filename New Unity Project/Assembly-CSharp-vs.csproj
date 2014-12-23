@@ -58,6 +58,7 @@
      <Compile Include="Assets\ALL\NewPH\Wheel.cs" />
      <Compile Include="Assets\ALL\NewPH\WheelFriction.cs" />
      <Compile Include="Assets\ALL\NewPH\WheelVisual.cs" />
+     <Compile Include="Assets\Exiter.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRDisplay.cs" />
