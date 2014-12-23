@@ -125,7 +125,7 @@ public class NewControl : MonoBehaviour {
 		GUI.Label(new Rect(20,50,250,100),"gear " + currentGear);
 		GUI.Label(new Rect(20,70,250,100),"vlocity z " + transform.InverseTransformDirection(rigidbody.velocity).z);
 		GUI.Label(new Rect(20,90,250,100),"Sideways slip wheel fl " + WheelFL.getSidewaysSlip());
-		GUI.Label(new Rect(20,110,250,100),"Relative steer " + CalculateSteer());
+		GUI.Label(new Rect(20,110,250,100),"All wheels grounded " + AllWheelsGrounded());
 		GUI.Label(new Rect(20,130,250,100),"Wheel fl rpm " + (WheelFL.collider.rpm));
 		GUI.Label(new Rect(20,150,250,100),"Motor torque " + motorTorque);
 		GUI.Label(new Rect(20,170,250,100),"Engaged delay " + engagedDelay);
@@ -140,6 +140,7 @@ public class NewControl : MonoBehaviour {
 	private Wheel WheelRL;
 	[SerializeField]
 	private Wheel WheelRR;
+	public steeringWheelAnim aim;
 	//Physical parameters of the car
 	public float wheelRadius = 0.4f;
 	public float suspDistance = 0.3f;
@@ -216,7 +217,7 @@ public class NewControl : MonoBehaviour {
 		SetupWheels();
 		//Setting up center of mass
 		//Edy approves
-		rigidbody.centerOfMass = new Vector3(0.0f,0.0f,0.7f);
+		rigidbody.centerOfMass = new Vector3(0.0f,0.0f,-1.3f);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -241,6 +242,7 @@ public class NewControl : MonoBehaviour {
 
 		WheelFL.setSteer(steerValue * relSteer);
 		WheelFR.setSteer(steerValue * relSteer);
+		aim.NeedAngle = -1.0f * steerValue * relSteer * 5;
 		//Test code
 		//WheelFL.collider.steerAngle = steerValue * 5.0f;
 		//WheelFR.collider.steerAngle = steerValue * 5.0f;
@@ -358,10 +360,9 @@ public class NewControl : MonoBehaviour {
 			//if(AllWheelsGrounded())
 			CalculateRPM(relVelocity);
 			//else 
-				//rpm = 1000;
+			//rpm = 1000;
 			//Changing gear in case there are
 			//too much revolutions per minute
-			//(Like in Ukraine lol)
 			ChangeGear(relVelocity);
 			//Test code
 			//Debug.Log(currentGear + " " + Time.time);
@@ -511,8 +512,8 @@ public class NewControl : MonoBehaviour {
 			if(AllWheelsGrounded())
 				WheelFR.ApplyMotorTorque(motorTorque);
 			else {
-				WheelFR.ApplyMotorTorque(0);
-				WheelFR.ApplyBrakeTorque(motorTorque);
+				//WheelFR.ApplyMotorTorque(0);
+				//WheelFR.ApplyBrakeTorque(motorTorque);
 				//gearChange = 0.60f;
 			}
 				//WheelFR.ApplyBrakeTorque(0);
@@ -520,8 +521,8 @@ public class NewControl : MonoBehaviour {
 			if(AllWheelsGrounded())
 				WheelFL.ApplyMotorTorque(motorTorque); 
 			else {
-				WheelFL.ApplyMotorTorque(0);
-				WheelFL.ApplyBrakeTorque(motorTorque);
+				//WheelFL.ApplyMotorTorque(0);
+				//WheelFL.ApplyBrakeTorque(motorTorque);
 				//gearChange = 0.60f;
 			} 
 				//WheelFL.ApplyMotorTorque(0);
@@ -529,8 +530,8 @@ public class NewControl : MonoBehaviour {
 			if(AllWheelsGrounded())
 				WheelRL.ApplyMotorTorque(motorTorque);
 			else {
-				WheelRL.ApplyMotorTorque(0);
-				WheelRL.ApplyBrakeTorque(motorTorque);
+				//WheelRL.ApplyMotorTorque(0);
+				//WheelRL.ApplyBrakeTorque(motorTorque);
 				//gearChange = 0.60f;
 			} 
 				//WheelRL.ApplyMotorTorque(0);
@@ -538,8 +539,8 @@ public class NewControl : MonoBehaviour {
 			if(AllWheelsGrounded())
 				WheelRR.ApplyMotorTorque(motorTorque);
 			else {
-				WheelRR.ApplyMotorTorque(0);
-				WheelRR.ApplyBrakeTorque(motorTorque);
+				//WheelRR.ApplyMotorTorque(0);
+				//WheelRR.ApplyBrakeTorque(motorTorque);
 				//gearChange = 0.60f;
 			}  
 				//WheelRR.ApplyMotorTorque(0);
@@ -806,7 +807,6 @@ public class NewControl : MonoBehaviour {
 	//Edy approves
 	void AntiRoll() {
 		WheelHit hit = new WheelHit();
-		//Whatever the fuck it means
 		float left = 1.0f;
 		float right = 1.0f;
 		
