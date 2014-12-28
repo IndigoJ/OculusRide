@@ -123,7 +123,7 @@ public class NewControl : MonoBehaviour {
 		GUI.Box(new Rect(10,10,250,200), "Car values");
 		GUI.Label(new Rect(20,30,250,100),"rpm " + rpm.ToString());
 		GUI.Label(new Rect(20,50,250,100),"gear " + currentGear);
-		GUI.Label(new Rect(20,70,250,100),"vlocity z " + transform.InverseTransformDirection(rigidbody.velocity).z);
+		GUI.Label(new Rect(20,70,250,100),"vlocity z " + currentSpeedKph);
 		GUI.Label(new Rect(20,90,250,100),"Sideways slip wheel fl " + WheelFL.getSidewaysSlip());
 		GUI.Label(new Rect(20,110,250,100),"All wheels grounded " + AllWheelsGrounded());
 		GUI.Label(new Rect(20,130,250,100),"Wheel fl rpm " + (WheelFL.collider.rpm));
@@ -140,7 +140,10 @@ public class NewControl : MonoBehaviour {
 	private Wheel WheelRL;
 	[SerializeField]
 	private Wheel WheelRR;
+	//Exteran devices
 	public steeringWheelAnim aim;
+	public Tachometer tach;
+	public Speedometer spmeter;
 	//Physical parameters of the car
 	public float wheelRadius = 0.4f;
 	public float suspDistance = 0.3f;
@@ -190,6 +193,7 @@ public class NewControl : MonoBehaviour {
 	public float maxSpeed = 150.0f;
 	public float rpm = 1000.0f;
 	public int currentGear = 0;
+	public float currentSpeedKph = 0.0f;
 	private bool eBraking = false;
 	//Skid parameters
 	public bool isSkidding = false;
@@ -242,7 +246,7 @@ public class NewControl : MonoBehaviour {
 
 		WheelFL.setSteer(steerValue * relSteer);
 		WheelFR.setSteer(steerValue * relSteer);
-		aim.NeedAngle = -1.0f * steerValue * relSteer * 5+100;
+		aim.NeedAngle = -1.0f * steerValue * relSteer * 5 + 100;
 		//Test code
 		//WheelFL.collider.steerAngle = steerValue * 5.0f;
 		//WheelFR.collider.steerAngle = steerValue * 5.0f;
@@ -276,6 +280,12 @@ public class NewControl : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		//Calculating current speed in k/ph
+		currentSpeedKph = MsIntoKms(transform.InverseTransformDirection(rigidbody.velocity).z);
+		//Setting up external devices
+		tach.RPM = rpm;
+		spmeter.Speed = currentSpeedKph;
+		//Adding some weight
 		rigidbody.AddForce(new Vector3(0f,0f,2000.0f));
 		AntiRoll();
 		//Debug.Log(overallValue);
@@ -788,11 +798,7 @@ public class NewControl : MonoBehaviour {
 		ebrakeFwdFriction.asymptoteSlip = 2.0f;
 		ebrakeFwdFriction.stiffness = 2.0f;
 	}
-	//Converting kilometers per second
-	//into meters per second
-	private float KmsIntoMs(float kilo) {
-		return kilo / 3.6f;
-	}
+
 	//Getting current car speed
 	//needs further investigation
 	private float GetCurrentSpeed() {
@@ -826,5 +832,17 @@ public class NewControl : MonoBehaviour {
 		if (rGrnd)
 			rigidbody.AddForceAtPosition(WheelFR.getTransform().right * antiForce,
 			                             WheelFR.getTransform().position); 
+	}
+
+	//Converting kilometers per hours
+	//into meters per second
+	private float KmsIntoMs(float kilo) {
+		return kilo / 3.6f;
+	}
+
+	//Converting meters per second
+	//into kilometers per hour
+	private float MsIntoKms(float ms) {
+		return ms * 3.6f;
 	}
 }
