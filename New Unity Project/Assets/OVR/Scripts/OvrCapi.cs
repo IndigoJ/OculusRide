@@ -1875,6 +1875,8 @@ namespace Ovr
             return ovrHmd_DismissHSWDisplay(HmdPtr) != 0;
 		}
 
+
+
 		// -----------------------------------------------------------------------------------
 		// ***** Property Access
 

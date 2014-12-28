@@ -495,6 +495,8 @@ public class OVRManager : MonoBehaviour
 
 	private void Update()
 	{
+
+
 		if (usePositionTracking != usingPositionTracking)
 		{
 			tracker.isEnabled = usePositionTracking;
@@ -517,12 +519,14 @@ public class OVRManager : MonoBehaviour
 			TrackingAcquired();
 
 		wasPositionTracked = tracker.isPositionTracked;
-		
+
+		//ТУТ Я МЕНЯЛ!!!!
+
 		if (isHSWDisplayed && Input.anyKeyDown)
 		{
 			DismissHSWDisplay();
 			
-			if (HSWDismissed != null)
+		if (HSWDismissed != null)
 				HSWDismissed();
 		}		
 		
